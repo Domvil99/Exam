@@ -1,0 +1,41 @@
+Assignment name  : repeat_alpha
+Expected files   : repeat_alpha.c
+Allowed functions: write
+--------------------------------------------------------------------------------
+
+Write a program called repeat_alpha that takes a string and display it
+repeating each alphabetical character as many times as its alphabetical index,
+followed by a newline.
+
+'a' becomes 'a', 'b' becomes 'bb', 'e' becomes 'eeeee', etc...
+
+Case remains unchanged.
+
+If the number of arguments is not 1, just display a newline.
+
+Examples:
+
+$>./a.out "abc"
+abbccc
+$>./a.out  "Alex." | cat -e
+Alllllllllllleeeeexxxxxxxxxxxxxxxxxxxxxxxx.$
+
+$>./a.out  'abacadaba 42!' | cat -e
+abbacccaddddabba 42!$
+
+$>./a.out  | cat -e
+$
+$>
+$>./a.out  "" | cat -e
+$
+$>
+
+
+
+Escribe un programa llamado repeat_alpha que tome una cadena y la muestre repitiendo cada carácter alfabético tantas veces como su índice en el alfabeto, seguido de un salto de línea.
+
+‘a’ se convierte en ‘a’, ‘b’ se convierte en ‘bb’, ‘e’ se convierte en ‘eeeee’, etc.
+
+Las mayúsculas y minúsculas mantienen su caso.
+
+Si el número de argumentos no es 1, simplemente muestra un salto de línea.

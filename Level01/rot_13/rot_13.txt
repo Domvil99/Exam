@@ -1,0 +1,40 @@
+Assignment name  : rot_13
+Expected files   : rot_13.c
+Allowed functions: write
+--------------------------------------------------------------------------------
+
+Write a program that takes a string and displays it, replacing each of its
+letters by the letter 13 spaces ahead in alphabetical order.
+
+'z' becomes 'm' and 'Z' becomes 'M'. Case remains unaffected.
+
+The output will be followed by a newline.
+
+If the number of arguments is not 1, the program displays a newline.
+
+Example:
+
+$>./a.out "abc"
+nop
+
+$>./a.out "My horse is Amazing." | cat -e
+Zl ubefr vf Nznmvat.$
+
+$>./a.out "AkjhZ zLKIJz , 23y " | cat -e
+NxwuM mYXVWm , 23l $
+
+$>./a.out | cat -e
+$
+$>
+$>./a.out "" | cat -e
+$
+$>
+
+Escribe un programa que tome una cadena y la muestre reemplazando cada una de sus letras por la letra situada 13 posiciones más adelante en el alfabeto.
+
+‘z’ se convierte en ‘m’ y ‘Z’ se convierte en ‘M’.
+El caso (mayúscula/minúscula) se mantiene.
+
+La salida debe terminar con un salto de línea.
+
+Si el número de argumentos no es 1, el programa muestra solo un salto de línea.

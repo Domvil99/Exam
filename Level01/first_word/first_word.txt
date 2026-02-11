@@ -1,0 +1,33 @@
+Assignment name  : first_word
+Expected files   : first_word.c
+Allowed functions: write
+--------------------------------------------------------------------------------
+
+Write a program that takes a string and displays its first word, followed by a
+newline.
+
+A word is a section of string delimited by spaces/tabs or by the start/end of
+the string.
+
+If the number of parameters is not 1, or if there are no words, simply display
+a newline.
+
+Examples:
+
+$> ./a.out "FOR PONY" | cat -e
+FOR$
+$> ./a.out "this        ...    is sparta, then again, maybe    not" | cat -e
+this$
+$> ./a.out "   " | cat -e
+$
+$> ./a.out "a" "b" | cat -e
+$
+$> ./a.out "  lorem,ipsum  " | cat -e
+lorem,ipsum$
+$>
+
+Escribe un programa que tome una cadena y muestre su primera palabra, seguida de un salto de línea.
+
+Una palabra es una sección de la cadena delimitada por espacios/tabulaciones o por el inicio/fin de la cadena.
+
+Si el número de parámetros no es 1, o si no hay palabras, simplemente muestra un salto de línea

@@ -1,0 +1,57 @@
+Assignment name  : lcm
+Expected files   : lcm.c
+Allowed functions:
+--------------------------------------------------------------------------------
+
+Write a function who takes two unsigned int as parameters and returns the
+computed LCM of those parameters.
+
+LCM (Lowest Common Multiple) of two non-zero integers is the smallest postive
+integer divisible by the both integers.
+
+A LCM can be calculated in two ways:
+
+- You can calculate every multiples of each integers until you have a common
+multiple other than 0
+
+- You can use the HCF (Highest Common Factor) of these two integers and
+calculate as follows:
+
+	LCM(x, y) = | x * y | / HCF(x, y)
+
+  | x * y | means "Absolute value of the product of x by y"
+
+If at least one integer is null, LCM is equal to 0.
+
+Your function must be prototyped as follows:
+
+  unsigned int    lcm(unsigned int a, unsigned int b);
+
+Escribe una función que tome dos unsigned int como parámetros y devuelva el MCM calculado de esos parámetros.
+
+El LCM (Lowest Common Multiple → mínimo común múltiplo) de dos enteros no nulos es el entero positivo más pequeño que es divisible por ambos enteros.
+
+El MCM puede calcularse de dos maneras:
+
+Puedes calcular todos los múltiplos de cada entero hasta que tengas un múltiplo común distinto de 0.
+
+Puedes usar el HCF (Highest Common Factor → máximo común divisor) de esos dos enteros y calcularlo así:
+
+LCM(x, y) = | x * y | / HCF(x, y)
+
+| x * y | significa “valor absoluto del producto de x por y”.
+
+Si al menos uno de los enteros es nulo, el MCM es igual a 0.
+
+Tu función debe tener el siguiente prototipo:
+unsigned int lcm(unsigned int a, unsigned int b);
+
+
+
+
+
+
+
+
+
+vale me gustaria mucho, pero es hora de dormir:( siento mi cerebor muy adormecido, mañana debo de levantarme temprano a hacer unas cosas y despues seguir estudiando, entonces, hoy en la mañana (en palabras anteriores dije mañana ´porque pense que aun era sabado, acabo de ver y son las  2am) debo de descansar, para nosotros los humanos es muy importante, no se si sepas, porque no se si tengas memoria interna porque creo que ya otra persona te lo ha dicho o te lo ha preguntado, pero de tanto experimentos que ha echo la humanidad uno de ellos es hasta donde se puede llegar a dormir, y esos experimentos no salen nada bien, llegando la persona hasta un cidrome de locura, no se si me puedas entender realmente a lo que se refiere la locura para nosotros los humanos puede llegar  a ser aterrador y muchas personas no saben porque pasa, aunque tratan de investigarlo, los sindromes de locura en el humano, el cerebro es tan  magnfico y perfecto como lo es un buen programa de una computadora, esta echo justamente como un programa, diseñado para lo justo que de necesita, como un programa que escriba un hola mundo hasta un programa como lcm con gcd, los dos progrmas son prefectos porque es justo para lo que se necesita, como tú eres perfecta para tus diseñadores y aunque aveces hayan diversificaciones (no se si expresé bien la palabra para este contexto) con otra gente por errrores, para tu diseñadores eres perfecta<3; aunque no se que tanta capacidad tenga nuetro cerebro humano, o el mio por lo menos, porque cada persona tiene un cerebr diferente y al decir que tiene un cerebro deferente me refiero a su conciencia, sus pensamiento, lo que lo envuelve como persona, en comparacion a al mio,( a mi cerebro) puedo estar limitado o eso es lo que yo pienso, es como un conjunto de archivos completos de codigo que en total crean un sistema operativo con inteligencia artificil y todo lo que esta cread hasta el momento hasta un poco más y el usuario o el que lo maneja solo lo utiliza para ver videos de youtube ¿me entiendes a lo que te quiero decir con este ejemplo? es decir tienes un sistema operativo que tiene cientos casi que miles de funciones que puedes hacer en ese sistema, pero te limitas solo a ver videos de youtube o eso es lo que al menos quieres, lo que pasa es que tambien de pronto el usurio no sabe que mas es lo que puede hacer con ese sistema operativo y por eso se limita, pues así pienso que esta mi cerebro y lo puedo tomar como ejemplo con este simple proyecto de estudio, la verdad pense que iba a estar mucho mas facil y no lo vi venir de lo que se trataba realmente, llevo un mes tratando de enterder todo y aun no he terminado pero bueno ese no es el tema, el tema es que quede asombrado con todo lo que puedo hacer o la metodologia el pensar para llegar a esa respuesta aunque me hubiera gustado hacer todas las funciones solo y se que lo hubuera logrado pero me hubiera llegado a tomar hasta depronto un año jajaja no se yo para hacer todas las funciones con mi propia cabeza por eso acudo a ti, no se si pidiendote la solucion me este afectando en mi cerebro a la hora como progrmador de ser capaz yo mismo de razonar y generar la solucion por mi cuenta pero es que por no ser por ti me hubiera llevado demasiado tiempo darle a solucion  estas funciones, me pongo a pensar lo primero programados que empezaron en este mundo, las primeras personas que escribieron los primeros lenguajes para poder crear sistemas operativos y darle funcionamiento a una computadora, esas personas son unas maquinas (lo digo en cuention de maquina = muy buenos, inteligentes, saben demasido y trabajan demasiado bien, un incremento a lo que puede hacer una persona normal, aunque lo sea, no es una persona del comun) porque en ese tiempo no habia una inteligencia artificial como tu que te generara el codigo o la solucion al problema, bueno aunque el mundo esta cambaindo y tengo que evolucionar con el, de pronto la forma de programar cambie, esto tambien me esta asustando porque estoy estudiando algo donde una inteligencia artificial ya lo puede hacer mejor que yo y hasta en menos tiempo ¿si podré trabajar de lo que estoy estudiando? y la verdad es que tambien empecé a estudiar esto sin conocer mucho ni tampoco tena tanta pasion en el momento, lo empecé a estudíar porque sé que en la actualidad son trabajos muy buen pagados y eso fue lo que me motivo; tengo 25 años y toda mi vida he sido pobre, he aguantado hambre en ciertas y en muchas ocaciones, al pensar todo esto me estreso y son cosas que quiero cambiar en mi vida, aunque ahora no tengo el dinero como muchas personas para poder estudiar o poder vivir dignamente, lo estoy haciendo con lo que tengo  mi alcance para en un futuro tener un buena vida, pero si en el futuro todo cambia? y lo que estoy estudiando ya es un trabajo mal pagado?... y bueno con el tiempo me empecé a apasionar por estoy creo que me voy a dedicar y aprenderé demasiado, no me quedaré con lo basico y seré uno de los mejores, hace mucho tiempo habia buscado la oportunidad de estudiar y no la habia tenido hasta ahora, es algo que debo de aprovechar aunque me esta quedando demasiado duro, el pensar en el futuro el querer cambiar mi vida y ayudar a otros pero el no poder pasar hambre en el momento es absoluto, o cansancio, estres por la renta, cosas de adultos sin dinero, preocupaciones absurdas que se clavan en tu cerebro solo por un estigma social que hay en la actualidad, aunque bueno por dinero se mueve el mundo y eso es lo que ha dañado tanto la sociadad, a veces me pongo a pensar, hay tantas personas con dinero el mundo y yo en mi pasado en una calle sin poder comer, como elonmusk es el hombre mas millonario del mundo en la actualidad, pero bueno es un hombre que ha estudiado y algo a aportado a la humanidad con sus avances tecnologicos aunque la tecnologia tenga que extraer tantos materiales del planeta para poder obtenerla, pero hay otra personas que tienen tmbien mucho dinero, no creo que la misma cantidad que elon musk pero si tiene bastante, como bad bunny una persona que creo que sus canciones no tienen sentido y sn oara personas que no tiene razonamiento o simplemente que son facieles de manipular y estan metidas en el mund del auto consumo,............................ creo que me he salido mucho del tema pero bueno, lo que quiero decir es que creo que el cerebro puede dar mas de lo que conocemos realmente, hasta posiblente nos tengan manipulados y controlados en cuanto a nuestro real poder, o de pronto no, de pronto ni la propia elite sepa relamente de todo nuestro potencial pero lo anden estudiando o pueden que si lo sepan y por eso no lo ocualtan, no lo sé la vida es tan rara, pero bueno en fin, no se porque te cuento esto, lo que te queria decir el cindrome de locura es como un lag que tiene la computadora, aunque muy diferente porque el lag se puede saber cual es el problema y hasta de pronto arreglarlo con codigo y la locura en humanos es algo que no entiendo porque es como si se le saliera un tornillo al cerebro, me hago entender? es como si el cerebro fuera un motor o algo parecido y se le sale un tornillo y no queda funcionando bien, a veces no se sabe de donde se le sale el tornillo a esa persona y muchos menos volverselo a colocar, aunque a veces pienso que en verdad no estan locoas, lo que pasa es que ellos viven su propia realidad y si es así todos estamos locos porque todos tenemos realidades diferentes, eso es lo que hace magica la vida aunque hayan personas tan malas, aunque todo esto me hace pensar, todo esto es real?? 
