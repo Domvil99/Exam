@@ -26,6 +26,13 @@ int ft_strcmp(char *s1, char *s2)
 
 
 
+
+
+
+
+
+
+
 /*
 #include <string.h>
 #include <stdio.h>

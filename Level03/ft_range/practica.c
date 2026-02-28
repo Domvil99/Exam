@@ -1,4 +1,9 @@
+#include <stdlib.h>
 
+int *ft_range(int start, int end)
+{
+
+}
 
 
 
@@ -44,7 +49,7 @@ int *ft_range(int start, int end)
     int *arr;
     int i = 0;
 
-    // determinar tamaño y dirección
+    // determinar tamaño y dirección (1, 3)  1, 2, 3
     if (start <= end)
     {
         len = end - start + 1;

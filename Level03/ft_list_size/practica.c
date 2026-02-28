@@ -1,4 +1,42 @@
-//int ft_list_size(t_list *begin_list);
+#include "practica.h"
+
+int ft_list_size(t_list *begin_list)
+{
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #include "ft_list.h"
 

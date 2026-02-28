@@ -1,43 +1,5 @@
 #include <unistd.h>
 
-int main(void)
-{
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-
-
 void print(int i)
 {
     char u;
@@ -50,9 +12,9 @@ void print(int i)
 }
 int main(void)
 {
-    int i = 185;
+    int i = 1;
 
-    while(i <= 187)
+    while(i <= 100)
     {
         if(i % 15 == 0)
             write(1, "fizzbuzz", 8);
@@ -66,4 +28,3 @@ int main(void)
             i++;
     }
 }
-*/
