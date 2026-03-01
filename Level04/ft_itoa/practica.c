@@ -1,5 +1,40 @@
 #include <stdlib.h>
 
+char	*ft_itoa(int nbr)
+{
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 static int  count_digits(int n)
 {
     int count = 0;

@@ -1,4 +1,60 @@
 #include <stdlib.h>
+int search(char s)
+{
+    return(s == ' ' || s == '\t' || s == '\0');
+}
+int count_words(char *str)
+{
+    int count = 0;
+    while(*str)
+    {
+        while(*str && search(*str))
+            str++;
+        if(*str && !search(*str))
+        {
+            count++;
+            if()
+        }
+    }
+    
+} 
+char    **ft_split(char *str)
+{
+    int len = count(str); 
+    char **tab = malloc
+    while(*str)
+    {
+        while(*str && search(*str))
+            str++;
+        if(*str && !search(*str))
+        {
+            int i = 0;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 static int  is_sep(char c)
 {
@@ -27,6 +83,7 @@ static char *copy_word(char *str)
 {
     int len = 0;
     char *word;
+    int i = 0;
 
     while (str[len] && !is_sep(str[len]))
         len++;
@@ -34,11 +91,14 @@ static char *copy_word(char *str)
     word = malloc(len + 1);
     if (!word)
         return (NULL);
-
-    for (int i = 0; i < len; i++)
+    
+    while(i < len)
+    {
         word[i] = str[i];
+        i++;
+    }
     word[len] = '\0';
-
+    
     return (word);
 }
 

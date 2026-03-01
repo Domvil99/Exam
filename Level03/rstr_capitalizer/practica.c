@@ -1,60 +1,85 @@
 #include <unistd.h>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 int is_letter(char c)
 {
-    return ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'));
+    return((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'));
 }
-
-char to_lower(char c)
-{
-    if (c >= 'A' && c <= 'Z')
-        return (c + 32);
-    return (c);
-}
-
 char to_upper(char c)
 {
-    if (c >= 'a' && c <= 'z')
-        return (c - 32);
-    return (c);
+    if(c >= 'a' && c <= 'z')
+        c -= 32;
+    return(c);
 }
-
-void rstr_capitalizer(char *s)
+char to_lower(char c)
+{
+    if(c >= 'A' && c <= 'Z')
+        c += 32;
+    return(c);
+}
+void rstr_capitalizer( char *str)
 {
     int i = 0;
 
-    while (s[i])
+    while(str[i])
     {
-        char c = s[i];
+        char c = to_lower(str[i]);
 
-        if (is_letter(c))
-        {
-            c = to_lower(c);
-
-            if (!is_letter(s[i + 1]) || s[i + 1] == ' ' || s[i + 1] == '\t')  // última letra de la palabra
+        if(is_letter(str[i]))
+            if(str[i + 1] == ' ' || str[i + 1] == '\t' || str[i + 1] == '\0' )
                 c = to_upper(c);
-        }
 
         write(1, &c, 1);
         i++;
     }
 }
-
-int main(int ac, char **av)
+int main(int argc, char **argv)
 {
-    if (ac > 1)
+    if(argc == 1)
+        write(1, "\n", 1);
+    else
     {
         int i = 1;
-        while (i < ac)
+
+        while(i < argc)
         {
-            rstr_capitalizer(av[i]);
+            rstr_capitalizer(argv[i]);
             write(1, "\n", 1);
             i++;
         }
     }
-    else
-        write(1, "\n", 1);
-
-    return (0);
+    return(0);
 }
-

@@ -1,46 +1,77 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #include <unistd.h>
-
-int ft_atoi(char *s)
+int ft_atoi(char *str)
 {
-    int n = 0;
-
-    while (*s >= '0' && *s <= '9')
+    int result = 0;
+    while(*str >= '0'&& *str <= '9')
     {
-        n = n * 10 + (*s - '0');
-        s++;
+        result = result * 10 + (*str - '0');
+        str++;
     }
-    return (n);
+    return(result);
 }
-
-void    ft_putnbr(int n)
+void ft_putnbr(int n)
 {
-    char c;
-
-    if (n > 9)
+    if(n > 9)
         ft_putnbr(n / 10);
-    c = (n % 10) + '0';
+    char c = (n % 10) + '0';
     write(1, &c, 1);
 }
 
-int main(int ac, char **av)
+int main(int argc, char **argv)
 {
-    if (ac == 2)
+    if(argc == 2)
     {
-        int n = ft_atoi(av[1]);
-        int i = 1;
+        int a = 1;
+        int b = ft_atoi(argv[1]);
 
-        while (i <= 9)
+        while(a <= 9)
         {
-            ft_putnbr(i);
+            ft_putnbr(a);
             write(1, " x ", 3);
-            ft_putnbr(n);
+            ft_putnbr(b);
             write(1, " = ", 3);
-            ft_putnbr(i * n);
+            ft_putnbr(a * b);
             write(1, "\n", 1);
-            i++;
+            a++;            
         }
-        return (0);
+        return(0);
     }
     write(1, "\n", 1);
-    return (0);
+    return(0);
 }

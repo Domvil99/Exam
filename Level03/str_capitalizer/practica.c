@@ -1,62 +1,51 @@
 #include <unistd.h>
-
+char to_lower(char c)
+{
+    if(c >= 'A' && c <= 'Z')
+        c +=32;
+    return(c);    
+}
+char to_upper(char c)
+{
+    if(c >= 'a' && c <= 'z')
+        c -=32;
+    return(c);    
+}
 int is_letter(char c)
 {
-    return ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'));
+    return((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'));
 }
-
-char    to_lower(char c)
+void str_capitalizer(char *str)
 {
-    if (c >= 'A' && c <= 'Z')
-        return (c + 32);
-    return (c);
-}
-
-char    to_upper(char c)
-{
-    if (c >= 'a' && c <= 'z')
-        return (c - 32);
-    return (c);
-}
-
-void    process(char *s)
-{
-    int i = 0;
-    int new_word = 1;
-
-    while (s[i])
+    char *a = str;
+    char prev = ' ';
+    while(*a)
     {
-        if (is_letter(s[i]))
-        {
-            if (new_word)
-                s[i] = to_upper(s[i]);
-            else
-                s[i] = to_lower(s[i]);
-            new_word = 0;
-        }
-        else
-            new_word = 1;
+        char c = to_lower(*a);
 
-        write(1, &s[i], 1);
-        i++;
+        if(is_letter(c))
+            if(prev == ' ' || prev == '\t')
+                c = to_upper(c);
+        write(1, &c, 1);
+        prev = *a;
+        a++;
     }
+
 }
-
-int main(int ac, char **av)
+int main(int argc, char **argv)
 {
-    int i = 1;
-
-    if (ac > 1)
+    if(argc == 1)
+        write(1, "\n", 1);
+    else
     {
-        while (i < ac)
+        int i = 1;
+
+        while(i < argc)
         {
-            process(av[i]);
+            str_capitalizer(argv[i]);
             write(1, "\n", 1);
             i++;
         }
     }
-    else
-        write(1, "\n", 1);
-
-    return (0);
+    return(0);
 }

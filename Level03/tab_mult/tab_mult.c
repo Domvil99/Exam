@@ -22,39 +22,36 @@ int ft_atoi(const char *str)
 	return (res * neg);
 }
 
-void ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
+
 
 void ft_putnbr(int nb)
 {
-	if (nb / 10 > 0)
+	if (nb > 9)
 		ft_putnbr(nb / 10);
-	ft_putchar(nb % 10 + '0');
+	char c = nb % 10 + '0';
+	write(1, &c, 1);
 }
 
-int main(int argc, char *argv[])
+int main(int argc, char **argv)
 {
-	int i;
-	int nbr;
+    int nbr;
+    int i = 1;
 
-	if (argc != 2)
-		write(1, "\n", 1);
-	else
-	{
-		i = 1;
-		nbr = ft_atoi(argv[1]);
-		while (i <= 9)
-		{
-			ft_putnbr(i);
-			write(1, " x ", 3);
-			ft_putnbr(nbr);
-			write(1, " = ", 3);
-			ft_putnbr(i * nbr);
-			write(1, "\n", 1);
-			i += 1;
-		}
-	}
-	return (0);
+    if (argc == 2)
+    {
+        nbr = ft_atoi(argv[1]);
+        while (i <= 9)
+        {
+            ft_putnbr(i);
+            write(1, " x ", 3);
+            ft_putnbr(nbr);
+            write(1, " = ", 3);
+            ft_putnbr(i * nbr);
+            write(1, "\n", 1);
+            i++;
+        }
+    }
+    else
+        write(1, "\n", 1);
+    return (0);
 }

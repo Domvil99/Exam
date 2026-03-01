@@ -3,6 +3,38 @@
 
 int main(int argc, char **argv)
 {
+    if(argc == 2)
+    {
+        
+    }
+    printf("\n");
+    return(0);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+int main(int argc, char **argv)
+{
     if (argc == 2)
     {
         int n = atoi(argv[1]);
