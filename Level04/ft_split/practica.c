@@ -19,7 +19,7 @@ int count_words(char *str)
     
 } 
 char    **ft_split(char *str)
-{
+{   
     int len = count(str); 
     char **tab = malloc
     while(*str)
