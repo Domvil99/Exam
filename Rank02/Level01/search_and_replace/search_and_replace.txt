@@ -29,11 +29,3 @@ ZaZ eT David aiME le METal.$
 
 $>./a.out "wNcOre Un ExEmPle Pas Facilw a Ecrirw " "w" "e" | cat -e
 eNcOre Un ExEmPle Pas Facile a Ecrire $
-
-
-Escribe un programa llamado search_and_replace que tome 3 argumentos:
-el primer argumento es una cadena en la que se debe reemplazar una letra (2º argumento) por otra (3º argumento).
-
-Si el número de argumentos no es 3, simplemente muestra un salto de línea.
-
-Si el segundo argumento no está contenido en el primero (la cadena), entonces el programa simplemente reescribe la cadena seguida de un salto de línea

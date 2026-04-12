@@ -16,9 +16,3 @@ $> ./a.out "dub0 a POIL" | cat -e
 LIOP a 0bud$
 $> ./a.out | cat -e
 $
-
-
-
-Escribe un programa que tome una cadena y muestre la cadena al revés, seguida de un salto de línea.
-
-Si el número de parámetros no es 1, el programa muestra solo un salto de línea.

@@ -2,46 +2,15 @@
 
 void ft_putstr(char *str)
 {
- 
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-void ft_putstr(char *str)
-{
     while(*str)
         write(1, str++, 1);
 }
 
-int main(void)
+/*  int main(void)
 {
-    ft_putstr("holas");
+    char *str = "Hello";
+
+    ft_putstr(str);
+    write(1, "\n", 1);
     return(0);
 }*/

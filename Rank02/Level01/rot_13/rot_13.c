@@ -4,94 +4,21 @@ int main(int argc, char **argv)
 {
     if(argc == 2)
     {
+        char *str = argv[1];
 
-    }write(1, "\n", 1);
+        while(*str)
+        {
+            char tm = *str;
+            
+            if((tm >= 'a' && tm <= 'm') || (tm >= 'A' && tm <= 'M'))
+                tm += 13;
+            else if((tm >= 'n' && tm <= 'z') || (tm >= 'N' && tm <= 'Z'))
+                tm -= 13;
+            write(1, &tm, 1);
+            str++;
+        }
+    }
+    
+    write(1, "\n", 1);
     return(0);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*int main(int argc, char **argv)
-{
-    char *p = argv[1];
-
-    if(argc == 2)
-    {   
-        while(*p)
-        {
-            if(*p >= 'a' && *p <= 'm')
-                *p += 13;
-            else if(*p >= 'n' && *p <= 'z')
-                *p -= 13;
-            else if(*p >= 'A' && *p <= 'M')
-                *p += 13;
-            else if(*p >= 'N' && *p <= 'Z')
-                *p -= 13;
-            write(1, p, 1);
-            p++;
-        }
-    }
-    write(1, "\n", 1);
-}*/
-
-
-
-
-
-/*
-int main(int argc, char **argv)
-{
-    char *p = argv[1];
-
-    if(argc == 2)
-    {
-        while(*p)
-        {
-            if(*p >= 'a' && *p <= 'z')
-            {
-                if(*p <= 'm')
-                *p += 13;
-                else
-                *p -= 13;
-            }
-            if(*p >= 'A' && *p <= 'Z' )
-            {
-                if(*p <= 'M')
-                *p += 13;
-                else
-                *p -= 13;
-            }
-            write(1, p, 1);  
-            p++;
-        }
-
-    }
-    write(1, "\n", 1);
-    return (0);
-}
-*/

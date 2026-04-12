@@ -29,13 +29,3 @@ $>
 $>./a.out  "" | cat -e
 $
 $>
-
-
-
-Escribe un programa llamado repeat_alpha que tome una cadena y la muestre repitiendo cada carácter alfabético tantas veces como su índice en el alfabeto, seguido de un salto de línea.
-
-‘a’ se convierte en ‘a’, ‘b’ se convierte en ‘bb’, ‘e’ se convierte en ‘eeeee’, etc.
-
-Las mayúsculas y minúsculas mantienen su caso.
-
-Si el número de argumentos no es 1, simplemente muestra un salto de línea.

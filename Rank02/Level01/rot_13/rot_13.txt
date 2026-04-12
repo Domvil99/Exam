@@ -29,12 +29,3 @@ $>
 $>./a.out "" | cat -e
 $
 $>
-
-Escribe un programa que tome una cadena y la muestre reemplazando cada una de sus letras por la letra situada 13 posiciones más adelante en el alfabeto.
-
-‘z’ se convierte en ‘m’ y ‘Z’ se convierte en ‘M’.
-El caso (mayúscula/minúscula) se mantiene.
-
-La salida debe terminar con un salto de línea.
-
-Si el número de argumentos no es 1, el programa muestra solo un salto de línea.

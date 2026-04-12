@@ -2,14 +2,12 @@
 
 void print(int i)
 {
-    char u;
-
-    if(i >= 10)
+    if(i > 9)
         print(i / 10);
-    u = i % 10 + '0';
-    write(1, &u, 1); 
-
+    char c = (i % 10) + '0';
+        write(1, &c, 1);
 }
+
 int main(void)
 {
     int i = 1;
@@ -25,6 +23,6 @@ int main(void)
         else
             print(i);
         write(1, "\n", 1);
-            i++;
+        i++;
     }
 }
