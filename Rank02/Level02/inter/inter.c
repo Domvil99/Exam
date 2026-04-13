@@ -1,29 +1,40 @@
 #include <unistd.h>
 
-int iter(char *str, char c, int len)
+int finder(char *str, char *current)
 {
-	int i = 0;
-
-	while (str[i] && (i < len || len == -1))
-		if (str[i++] == c)
-			return (1);
-	return (0);
+    while(str < current)
+    {
+        if(*str == *current)
+            return(1);
+        str++;
+    }
+    return(0);
 }
-
-int main(int argc, char *argv[])
+int main(int argc, char **argv)
 {
-	int i;
+    if(argc == 3)
+    {
+        char *str1 = argv[1];
 
-	if (argc == 3)
-	{
-		i = 0;
-		while (argv[1][i])
-		{
-			if (!iter(argv[1], argv[1][i], i) && iter(argv[2], argv[1][i], -1))
-				write(1, &argv[1][i], 1);
-			i += 1;
-		}
-	}
-	write(1, "\n", 1);
-	return (0);
+        while(*str1)
+        {
+            if(!finder(argv[1], str1))
+            {
+                char *str2 = argv[2];
+
+                while(*str2)
+                {
+                    if(*str1 == *str2)
+                    {
+                        write(1, str1, 1);
+                        break;
+                    }
+                    str2++;
+                }
+            }
+            str1++;
+        }
+    }
+    write(1, "\n", 1);
+    return(0);
 }

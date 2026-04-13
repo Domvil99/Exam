@@ -11,6 +11,3 @@ The function should be prototyped as follows:
 char	*ft_strpbrk(const char *s1, const char *s2);
 
 Reproduce exactly the behavior of the functiqon strpbrk 
-
-Reproduce exactamente el comportamiento de la función strpbrk
-(man strpbrk).

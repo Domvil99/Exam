@@ -11,10 +11,3 @@ It works much like the standard atoi(const char *str) function, see the man.
 Your function must be declared as follows:
 
 int	ft_atoi(const char *str);
-
-Escribe una función que convierta el argumento de tipo cadena str en un entero (int)
-y lo devuelva.
-
-Funciona igual que la función estándar atoi(const char *str), mira el man.
-
-Tu función debe declararse así:

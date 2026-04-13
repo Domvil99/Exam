@@ -21,12 +21,3 @@ hello_world$
 
 $>./camel_to_snake | cat -e
 $
-
-Escribe un programa que tome una única cadena en formato lowerCamelCase  
-y la convierta en una cadena en formato snake_case.
-
-Una cadena en lowerCamelCase es una cadena donde cada palabra empieza con mayúscula,
-excepto la primera.
-
-Una cadena en snake_case es una cadena donde cada palabra está en minúsculas,
-separada por un guion bajo “_”.

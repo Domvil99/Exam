@@ -22,10 +22,3 @@ $>./inter "rien" "cette phrase ne cache rien" | cat -e
 rien$
 $>./inter | cat -e
 $
-
-
-Escribe un programa que reciba dos strings y muestre, sin duplicados, los caracteres que aparecen en ambas cadenas, respetando el orden en que aparecen en la primera.
-
-La salida debe terminar con un salto de línea \n.
-
-Si el número de argumentos es distinto de 2, el programa debe mostrar solo \n.

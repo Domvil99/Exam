@@ -1,23 +1,34 @@
 #include <stdio.h>
 
-size_t	ft_strcspn(const char *s, const char *reject)
+size_t  ft_strcspn(const char *s, const char *reject)
 {
-	int i = 0;
-	int j = 0;
-
-	while (s[i] != '\0')
-	{
-		j = 0;
-		while (reject[j] != '\0')
-		{
-			if (s[i] == reject[j])
-				return (i);
-			j++;
-		}
-		i++;
-	}
-	return (i);
+    const char *a = s;
+    
+    while(*a)
+    {
+        const char *b = reject;
+        
+        while(*b)
+        {
+            if(*a == *b)
+                return(a - s);
+            b++;
+        } 
+        a++;
+    }
+    return(a - s);
 }
 
-s = Hola
-reject = pedro
+/*  int main(void)
+{
+    printf("%zu\n", ft_strcspn("hola mundo", " "));
+    printf("%zu\n", ft_strcspn("abcdef", "x"));
+    printf("%zu\n", ft_strcspn("abcdef", "d"));
+    printf("%zu\n", ft_strcspn("123456", "456"));
+    printf("%zu\n", ft_strcspn("no-match", "XYZ"));
+    printf("%zu\n", ft_strcspn("", "abc"));
+    printf("%zu\n", ft_strcspn("test", ""));
+    printf("%zu\n", ft_strcspn("42Network", "Nw"));
+
+    return 0;
+}*/

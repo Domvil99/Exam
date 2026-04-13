@@ -1,21 +1,83 @@
+#include <stdio.h>
+
 int ft_atoi(const char *str)
 {
-	int i = 0;
-	int neg = 1;
-	int res = 0;
+    int sign = 1;
+    int result = 0;
 
-	while (str[i] == ' ' || (str[i] >= 9 && str[i] <= 13))
-		i++;
-	if (str[i] == '-' || str[i] == '+')
-	{
-		if (str[i] == '-')
-			neg *= -1;
-		i++;
-	}
-	while (str[i] >= '0' && str[i] <= '9')
-	{
-		res = (str[i] - '0') + (res * 10);
-		i++;
-	}
-	return (res * neg);
+    while (*str == ' ' || (*str >= 9 && *str <= 13))
+        str++;
+
+    if (*str == '-' || *str == '+')
+    {
+        if (*str == '-')
+            sign = -1;
+        str++;
+    }
+
+    while (*str >= '0' && *str <= '9')
+        result = result * 10 + (*str++ - '0');
+
+    return (result * sign);
+}
+
+/*  int main(void)
+{
+    printf("%d\n", ft_atoi("42"));
+    printf("%d\n", ft_atoi("   \t\n  -1234"));
+    printf("%d\n", ft_atoi("+5678"));
+    printf("%d\n", ft_atoi("0000123"));
+    printf("%d\n", ft_atoi("   +0"));
+    printf("%d\n", ft_atoi("   -00089"));
+    return 0;
+}*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+int ft_atoi(const char *str)
+{
+    int sign = 1;
+    int result = 0;
+
+    while(*str == ' ' || (*str >= 9 && *str <= 13))
+        str++;
+    if(*str == '-' || *str == '+')
+        {
+            if(*str == '-')
+                sign = -1;
+            str++;
+        }
+    while(*str >= '0' && *str <= '9')
+    {
+        result = result * 10 + (*str - '0');
+        str++;
+    }
+    return(result * sign);
 }

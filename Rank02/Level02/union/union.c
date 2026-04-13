@@ -1,43 +1,103 @@
 #include <unistd.h>
 
-int check(int c, char *str, int index)
+int finder(char *start1, char *start2, char current)
 {
-	int i = 0;
-	
-	while(i < index)
-	{
-		if (str[i] == c)
-			return 0;
-		i++;
-	}
-	return  1;
+    while(start2 < current)
+    {
+        if()
+    }
+}
+int main(int argc, char **argv)
+{
+    if(argc == 3)
+    {
+        char *str1 = argv[1];
+
+        while(*str1)
+        {
+            if(!finder(argv[1], str))
+            {
+            }    
+        }
+        
+      /*  char *str2 = argv[2];
+
+        while(*str2)
+        {
+            if((!finde(argv[1], argv[2], str1)) && (!finde(argv[1], argv[2], str2)))
+        }
+        */
+    }write(1, "\n", 1);
+    return(0);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+int ya_esta(char *a, char b, char *limit)
+{
+    
+    
+    while(a < limit)
+    {
+        if(*a == b)
+            return(1);
+        a++;
+    }
+    return(0);
+
 }
 
 int main(int argc, char **argv)
-{	
-	int i = 0;
-	int j = 0;
-	int k = 0;
+{
+    if(argc == 3)
+    {
+        char *p = argv[1];
+        char *j = argv[2];
+        
 
-	if (argc == 3)
-	{
-		while(argv[1][i] != '\0')
-		{
-			i++;
-		}
-		while(argv[2][j] != '\0')
-		{
-			argv[1][i] = argv[2][j];
-			i++;
-			j++;
-		}
-		i--;
-		while(k <= i)
-		{
-			if(check(argv[1][k], argv[1], k) == 1) 
-				write (1, &argv[1][k], 1); 
-			k++;
-		}
-	}
-	write (1, "\n", 1);
+        while(*p)
+        {
+            if(!ya_esta(argv[1], *p, p))
+                write(1, p, 1);
+            p++;
+        }
+        while(*j)
+        {
+            if(!ya_esta(argv[1], *j, p) && !ya_esta(argv[2], *j, j))
+                write(1, j, 1);
+            j++;
+        }
+    }
+    write(1, "\n", 1);
 }
+*/

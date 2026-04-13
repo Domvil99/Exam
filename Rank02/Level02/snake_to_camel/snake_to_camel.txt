@@ -19,11 +19,3 @@ $>./camel_to_snake "hello_world" | cat -e
 helloWorld$
 $>./camel_to_snake | cat -e
 $
-
-
-Escribe un programa que reciba un único string en formato snake_case  
-y lo convierta en un string en lowerCamelCase.
-
-Un string en snake_case es un string donde cada palabra está en minúsculas y separada por un guion bajo "_".
-
-Un string en lowerCamelCase es un string donde cada palabra empieza con mayúscula excepto la primera.

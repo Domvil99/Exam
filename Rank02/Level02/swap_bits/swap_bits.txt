@@ -18,8 +18,3 @@ _____________
      \ /
      / \
  0001 | 0100
-
-
-
-
-Escribe una función que reciba un byte, intercambie sus dos mitades (como en el ejemplo) y devuelva el resultado.

@@ -23,10 +23,3 @@ $
 $> ./last_word "  lorem,ipsum  " | cat -e
 lorem,ipsum$
 $>
-
-
-Escribe un programa que tome una cadena y muestre su última palabra, seguida de un salto de línea (\n).
-
-Una palabra es una sección de la cadena delimitada por espacios/tabulaciones o por el inicio/fin de la cadena.
-
-Si el número de parámetros no es 1, o no hay palabras, el programa debe mostrar solo un salto de línea.

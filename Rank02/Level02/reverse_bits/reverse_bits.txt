@@ -19,5 +19,3 @@ _____________
 	 ||
 	 \/
  0110  0100
-
-Escribe una función que reciba un byte, lo invierta bit a bit (como en el ejemplo) y devuelva el resultado.
