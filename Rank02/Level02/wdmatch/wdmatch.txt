@@ -24,11 +24,3 @@ $>./wdmatch "error" rrerrrfiiljdfxjyuifrrvcoojh | cat -e
 $
 $>./wdmatch | cat -e
 $
-
-
-Escribe un programa que reciba dos strings y compruebe si es posible escribir el primer string usando los caracteres del segundo string, respetando el orden en el que esos caracteres aparecen en el segundo string.
-
-Si es posible, el programa muestra el primer string seguido de un salto de línea \n.
-Si no es posible, simplemente muestra \n.
-
-Si el número de argumentos no es 2, el programa muestra \n.

@@ -29,12 +29,3 @@ $>
 $>./a.out "rien" | cat -e
 $
 $>
-
-
-
-
-Escribe un programa que reciba dos strings y muestre, sin duplicados, los caracteres que aparecen en cualquiera de los dos strings.
-
-La salida debe respetar el orden en el que los caracteres aparecen en la línea de comandos, y debe terminar con un salto de línea \n.
-
-Si el número de argumentos no es 2, el programa debe mostrar solo \n.
