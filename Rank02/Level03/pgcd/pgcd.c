@@ -1,25 +1,74 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main(int argc, char const *argv[])
+int main(int argc, char **argv)
 {
-	int nbr1;
-	int nbr2;
+    if(argc == 3)
+    {
 
-	if (argc == 3)
-	{
-		if ((nbr1 = atoi(argv[1])) > 0 && (nbr2 = atoi(argv[2])) > 0)
-		{
-			while (nbr1 != nbr2)
-			{
-				if (nbr1 > nbr2)
-					nbr1 -= nbr2;
-				else
-					nbr2 -= nbr1;
-			}
-			printf("%d", nbr1);
-		}
-	}
-	printf("\n");
-	return (0);
+    }
+    printf("\n");
+    return(0);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+int gcd(int a, int b)
+{
+    while (b != 0)
+    {
+        int tmp = a % b;
+        a = b;
+        b = tmp; 
+    }
+    return (a);
+}
+
+int main(int ac, char **av)
+{
+    if (ac == 3)
+    {
+        int a = atoi(av[1]);
+        int b = atoi(av[2]);
+
+        if (a > 0 && b > 0)
+            printf("%d\n", gcd(a, b));
+        else
+            printf("\n");
+
+        return (0);
+    }
+
+    printf("\n");
+    return (0);
 }

@@ -17,21 +17,19 @@ multiple other than 0
 - You can use the HCF (Highest Common Factor) of these two integers and
 calculate as follows:
 
-	LCM(x, y) = | x * y | / HCF(x, y)
+//   LCM(x, y) =    x    | * y 
+//             HCF(x, y) |
 
-  | x * y | means "Absolute value of the product of x by y"
+//  | x * y | means "Absolute value of the product of x by y"
 
-  g = gcd(a, b);
-  return (a / g * b);
-
-  // LCM(x, y) =  x * y 
-            // HCF(x, y)
 
 If at least one integer is null, LCM is equal to 0.
 
 Your function must be prototyped as follows:
 
   unsigned int    lcm(unsigned int a, unsigned int b);
+
+
 
 Escribe una función que tome dos unsigned int como parámetros y devuelva el MCM calculado de esos parámetros.
 

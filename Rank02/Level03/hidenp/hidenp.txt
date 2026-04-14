@@ -24,15 +24,3 @@ $>./hidenp "abc" "btarc" | cat -e
 $>./hidenp | cat -e
 $
 $>
-
-
-
-Escribe un programa llamado hidenp que reciba dos cadenas y muestre 1 seguido de un salto de línea si la primera cadena está oculta dentro de la segunda, y muestre 0 seguido de un salto de línea en caso contrario.
-
-Sean s1 y s2 dos cadenas.
-Decimos que s1 está oculta en s2 si es posible encontrar cada carácter de s1 dentro de s2, en el mismo orden en que aparecen en s1.
-Los caracteres no tienen que ser consecutivos, solo deben aparecer en orden.
-
-Además, la cadena vacía está oculta en cualquier cadena.
-
-Si el número de parámetros no es exactamente 2, el programa debe mostrar solo un salto de línea.

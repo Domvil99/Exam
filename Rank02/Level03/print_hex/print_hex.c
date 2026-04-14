@@ -1,30 +1,75 @@
 #include <unistd.h>
 
-int ft_atoi(char *str)
-{
-	int n = 0;
-
-	while (*str != '\0')
-	{
-		n = n * 10;
-		n = n + *str - '0';
-		++str;
-	}
-	return (n);
-}
-
-void print_hex(int n)
-{
-	char hex_digits[] = "0123456789abcdef";
-
-	if (n >= 16)
-		print_hex(n / 16);
-	write(1, &hex_digits[n % 16], 1);
-}
-
 int main(int argc, char **argv)
 {
-	if (argc == 2)
-		print_hex(ft_atoi(argv[1]));
-	write(1, "\n", 1);
+    if(argc == 2)
+    {
+
+    }
+    write(1, "\n", 1);
+    return(0);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+int ft_atoi(char *i)
+{
+    int result = 0;
+
+    while(*i >= '0' && *i <= '9')
+    {
+        result = result * 10 + (*i - '0');
+        i++;
+    }
+    return(result);
+}
+void print_hex(unsigned int a)
+{
+    char *l = "0123456789abcdef";
+
+    if(a >= 16)
+        print_hex(a / 16);
+    write(1, &l[a % 16], 1);
+
+}
+int main(int argc, char **argv)
+{
+    if(argc == 2)
+    {
+        int a = ft_atoi(argv[1]);
+        print_hex(a);
+    }
+    write(1, "\n", 1);
+    return(0);
 }

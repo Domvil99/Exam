@@ -26,9 +26,3 @@ $
 $> ./epur_str "" | cat -e
 $
 $>
-
-Escribe un programa que reciba una cadena y la muestre con exactamente un espacio entre cada palabra, sin espacios ni tabulaciones al principio ni al final, seguido de un salto de línea \n.
-
-Una “palabra” se define como una parte de la cadena delimitada por espacios/tabulaciones, o por el inicio/fin de la cadena.
-
-Si el número de argumentos no es 1, o si no hay palabras que mostrar, el programa debe mostrar solo un salto de línea.

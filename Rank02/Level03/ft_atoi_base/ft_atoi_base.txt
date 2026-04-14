@@ -18,23 +18,3 @@ string.
 Your function must be declared as follows:
 
 int	ft_atoi_base(const char *str, int str_base);
-
-
-Escribe una función que convierta la cadena str (en una base N ≤ 16) a un entero en base 10 y lo devuelva.
-
-Los caracteres reconocidos en la entrada son:
-0123456789abcdef
-Por supuesto, deben limitarse según la base solicitada.
-Por ejemplo:
-
-base 4 reconoce "0123"
-
-base 16 reconoce "0123456789abcdef"
-
-También deben reconocerse las letras mayúsculas:
-"12fdb3" debe interpretarse igual que "12FDB3".
-
-Los signos menos ('-') solo deben interpretarse si son el primer carácter de la cadena.
-
-Tu función debe declararse así:
-int ft_atoi_base(const char *str, int str_base);

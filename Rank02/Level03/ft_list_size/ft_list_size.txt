@@ -18,16 +18,3 @@ typedef struct    s_list
     struct s_list *next;
     void          *data;
 }                 t_list;
- 
-Escribe una función que devuelva el número de elementos en la lista enlazada que se le pasa como argumento.
-
-Tu funcion debe declararse así:
-int ft_list_size(t_list *begin_list);
-
-Debes usar la siguiente estructura, y entregarla en un archivo llamado ft_list.h:
-
-typedef struct    s_list
-{
-    struct s_list *next;
-    void          *data;
-}                 t_list;

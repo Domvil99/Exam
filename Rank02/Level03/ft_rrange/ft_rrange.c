@@ -1,19 +1,60 @@
 #include <stdlib.h>
+#include <stdio.h>
 
 int *ft_rrange(int start, int end)
 {
-	int *rrange;
-	int i = 0;
+    int len;
+    int sign;
 
-	if (start > end)
-		rrange = malloc(sizeof(int) * (start - end) + 1);
-	else
-		rrange = malloc(sizeof(int) * (end - start) + 1);
-	while (start != end)
-	{
-		rrange[i++] = end;
-		end -= (start > end) ? -1 : 1;
-	}
-	rrange[i] = end;
-	return (rrange);
+    if(start >= end)
+    {
+        len = start - end + 1;
+        sign = 1;
+    }
+    else 
+    {
+        len = end - start + 1;
+        sign = -1; 
+    }
+
+    int *arr = (int *)malloc(len * sizeof(int));
+    if(!arr)
+        return(NULL);
+    
+    int *tmp = arr;
+
+    while (len--)
+    {
+        *tmp = end;
+        end += sign;
+        tmp++;
+    }
+    return(arr);
 }
+
+/*  int main(void)
+{
+    int start = 4;
+    int end = -5;
+
+    int *arr = ft_rrange(start, end);
+    if(!arr)
+        return(1);
+    
+    int len;
+    
+    if(start >= end)
+        len = start - end + 1;
+    else
+        len = end - start + 1;
+    
+    int *tm = arr;
+    while (tm < arr + len)
+    {
+        printf("%d ", *tm);
+        tm++;
+    }
+    printf("\n");
+    free(arr);
+    return(0);
+}/*

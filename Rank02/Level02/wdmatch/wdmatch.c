@@ -7,7 +7,7 @@ int main(int argc, char **argv)
         char *str1 = argv[1];
         char *str2 = argv[2];
 
-        while(*str2)
+        while(*str1 && *str2)
         {
             if(*str1 == *str2)
                 str1++;

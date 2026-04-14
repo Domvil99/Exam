@@ -1,38 +1,51 @@
 #include <unistd.h>
-
+char to_lower(char c)
+{
+    if(c >= 'A' && c <= 'Z')
+        c +=32;
+    return(c);    
+}
+char to_upper(char c)
+{
+    if(c >= 'a' && c <= 'z')
+        c -=32;
+    return(c);    
+}
+int is_letter(char c)
+{
+    return((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'));
+}
 void str_capitalizer(char *str)
 {
-	int i = 0;
+    char *a = str;
+    char prev = ' ';
+    while(*a)
+    {
+        char c = to_lower(*a);
 
-	if (str[i] >= 'a' && 'z' >= str[i])
-		str[i] -= 32;
-	write(1, &str[i], 1);
-	while (str[++i])
-	{
-		if (str[i] >= 'A' && 'Z' >= str[i])
-			str[i] += 32;
-		if ((str[i] >= 'a' && 'z' >= str[i]) && (str[i - 1] == ' ' ||
-												 str[i - 1] == '\t'))
-			str[i] -= 32;
-		write(1, &str[i], 1);
-	}
+        if(is_letter(c))
+            if(prev == ' ' || prev == '\t')
+                c = to_upper(c);
+        write(1, &c, 1);
+        prev = *a;
+        a++;
+    }
+
 }
-
-int main(int argc, char *argv[])
+int main(int argc, char **argv)
 {
-	int i;
+    if(argc == 1)
+        write(1, "\n", 1);
+    else
+    {
+        int i = 1;
 
-	if (argc < 2)
-		write(1, "\n", 1);
-	else
-	{
-		i = 1;
-		while (i < argc)
-		{
-			str_capitalizer(argv[i]);
-			write(1, "\n", 1);
-			i += 1;
-		}
-	}
-	return (0);
+        while(i < argc)
+        {
+            str_capitalizer(argv[i]);
+            write(1, "\n", 1);
+            i++;
+        }
+    }
+    return(0);
 }

@@ -2,55 +2,64 @@
 
 int ft_atoi(char *str)
 {
-	int i = 0;
-	int nbr = 0;
-	while (str[i] && str[i] >= '0' && str[i] <= '9')
-	{
-		nbr = nbr * 10 + str[i] - '0';
-		i++;
-	}
-	return (nbr);
+    int result = 0;
+
+    while(*str >= '0' && *str <= '9')
+        result = result * 10 + (*str++ - '0');
+    return(result);  
+}
+int checker(int finder)
+{
+    int i = 2;
+
+    while(i * i <= finder)
+    {
+        if(finder % i == 0)
+            return(0);
+        i++;
+    }
+    return(1);
 }
 
-void ft_putnbr(int n)
+void printer(int sum)
 {
-	if (n >= 10)
-		ft_putnbr(n / 10);
-	write(1, &"0123456789"[n % 10], 1);
+    if(sum > 9)
+        printer(sum / 10);
+    char c = (sum % 10) + '0';
+    write(1, &c, 1);
 }
 
-int is_prime(int nbr)
+int main(int argc, char **argv)
 {
-	int i = 2;
+    if(argc == 2)
+    {
+        char *str = argv[1];
 
-	while (i < nbr)
-	{
-		if (nbr % i == 0)
-			return (0);
-		i++;
-	}
-	return (1);
-}
+        while(*str)
+        {
+            if(*str < 48 || *str > 57)
+            {
+                write(1, "0\n", 2);
+                return(0);
+            }
+            str++;
+        }
 
-int main(int ac, char **av)
-{
+        int number = ft_atoi(argv[1]);
+        int prim = 2;
+        int sum = 0;
 
-	int i = 2;
-	int k = 0;
-	int nbr;
-
-	if (ac == 2)
-	{
-		nbr = ft_atoi(av[1]);
-		while (i <= nbr)
-		{
-			if (is_prime(i))
-				k += i;
-			i++;
-		}
-		ft_putnbr(k);
-	}
-	if (ac != 2)
-		write(1, "0", 1);
-	write(1, "\n", 1);
+        while(prim <= number)
+        {
+            if(checker(prim))
+              sum += prim;
+            prim++;              
+        }
+        printer(sum);
+        write(1, "\n", 1);
+        return(0);
+    }
+    else
+        write(1, "0\n", 2);
+    return(0);
 }
