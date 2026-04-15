@@ -1,55 +1,128 @@
 #include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
-
-char *ft_strncpy(char *dest, char *src, int size)
+int search(char s)
 {
-	int i = 0;
-
-	while (i < size && src[i] != '\0')
-	{
-		dest[i] = src[i];
-		i++;
-	}
-	dest[i] = '\0';
-	return (dest);
+    return(s == ' ' || s == '\t' || s == '\0');
+}
+int count_words(char *str)
+{
+    int count = 0;
+    while(*str)
+    {
+        while(*str && search(*str))
+            str++;
+        if(*str && !search(*str))
+        {
+            count++;
+            if()
+        }
+    }
+    
+} 
+char    **ft_split(char *str)
+{   
+    int len = count(str); 
+    char **tab = malloc
+    while(*str)
+    {
+        while(*str && search(*str))
+            str++;
+        if(*str && !search(*str))
+        {
+            int i = 0;
+        }
+    }
 }
 
-char **ft_split(char *str)
-{
-	char **result;
-	int wordcounter = 0;
-	int start = 0;
-	int i = 0;
-	int k = 0;
 
-	while (str[i])
-	{
-		while (str[i] == ' ' || str[i] == '\t' || str[i] == '\n')
-			i++;
-		if (str[i] && str[i] != ' ' && str[i] != '\t' && str[i] != '\n')
-			wordcounter++;
-		while (str[i] && str[i] != ' ' && str[i] != '\t' && str[i] != '\n')
-			i++;
-	}
-	result = malloc(sizeof(char *) * (wordcounter + 1));
-	i = 0;
-	while (str[i])
-	{
-		start = -1;
-		while (str[i] == ' ' || str[i] == '\t' || str[i] == '\n')
-			i++;
-		if (str[i] && str[i] != ' ' && str[i] != '\t' && str[i] != '\n')
-			start = i;
-		while (str[i] && str[i] != ' ' && str[i] != '\t' && str[i] != '\n')
-			i++;
-		if (start < i && start != -1)
-		{
-			result[k] = malloc(sizeof(char) * (i - start + 1));
-			ft_strncpy(result[k], &str[start], (i - start));
-			k++;
-		}
-	}
-	result[k] = NULL;
-	return (result);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+static int  is_sep(char c)
+{
+    return (c == ' ' || c == '\t' || c == '\n');
+}
+
+static int  count_words(char *str)
+{
+    int count = 0;
+
+    while (*str)
+    {
+        while (*str && is_sep(*str))
+            str++;
+        if (*str && !is_sep(*str))
+        {
+            count++;
+            while (*str && !is_sep(*str))
+                str++;
+        }
+    }
+    return (count);
+}
+
+static char *copy_word(char *str)
+{
+    int len = 0;
+    char *word;
+    int i = 0;
+
+    while (str[len] && !is_sep(str[len]))
+        len++;
+
+    word = malloc(len + 1);
+    if (!word)
+        return (NULL);
+    
+    while(i < len)
+    {
+        word[i] = str[i];
+        i++;
+    }
+    word[len] = '\0';
+    
+    return (word);
+}
+
+char    **ft_split(char *str)
+{
+    int     words = count_words(str);
+    char    **tab = malloc((words + 1) * sizeof(char *));
+    int     i = 0;
+
+    if (!tab)
+        return (NULL);
+
+    while (*str)
+    {
+        while (*str && is_sep(*str))
+            str++;
+        if (*str && !is_sep(*str))
+        {
+            tab[i] = copy_word(str);
+            i++;
+            while (*str && !is_sep(*str))
+                str++;
+        }
+    }
+    tab[i] = NULL;
+    return (tab);
 }

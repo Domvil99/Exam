@@ -1,70 +1,36 @@
-#include <stdlib.h>
 #include "ft_list.h"
+#include <stdlib.h>
 
-void ft_list_remove_if(t_list **begin_list, void *data_ref, int (*cmp)())
+void    ft_list_remove_if(t_list **begin_list, void *data_ref, int (*cmp)())
 {
-	if (begin_list == NULL || *begin_list == NULL)
-		return;
+    t_list  *curr;
+    t_list  *tmp;
 
-	t_list *cur = *begin_list;
+    if (!begin_list || !*begin_list)
+        return;
 
-	if (cmp(cur->data, data_ref) == 0)
-	{
-		*begin_list = cur->next;
-		free(cur);
-		ft_list_remove_if(begin_list, data_ref, cmp);
-	}
-	else // if there is a no else, you cant pass the Moulinette, tryed 2023.09.08
-	{
-		cur = *begin_list;
-		ft_list_remove_if(&cur->next, data_ref, cmp);
-	}
+    /* Eliminar nodos del inicio mientras coincidan */
+    while (*begin_list && cmp((*begin_list)->data, data_ref) == 0)
+    {
+        tmp = *begin_list;
+        *begin_list = (*begin_list)->next;
+        free(tmp);
+    }
+
+    curr = *begin_list;
+    if (!curr)
+        return;
+
+    /* Eliminar nodos del resto de la lista */
+    while (curr->next)
+    {
+        if (cmp(curr->next->data, data_ref) == 0)
+        {
+            tmp = curr->next;
+            curr->next = curr->next->next;
+            free(tmp);
+        }
+        else
+            curr = curr->next;
+    }
 }
-
-//---------------------------------------------------------------------
-// #include <stdio.h>
-// #include <string.h>
-
-// void	print_list(t_list **begin_list)
-// {
-// 	t_list *cur = *begin_list;
-// 	while (cur != 0)
-// 	{
-// 		printf("%s\n", cur->data);
-// 		cur = cur->next;
-// 	}
-// }
-
-// int		main(void)
-// {
-// 	char straa[] = "String aa";
-// 	t_list *aa = malloc(sizeof(t_list));
-// 	aa->next = 0;
-// 	aa->data = straa;
-
-// 	char strbb[] = "String bb";
-// 	t_list *bb = malloc(sizeof(t_list));
-// 	bb->next = 0;
-// 	bb->data = strbb;
-
-// 	char strcc[] = "String cc";
-// 	t_list *cc = malloc(sizeof(t_list));
-// 	cc->next = 0;
-// 	cc->data = strcc;
-
-// 	char strdd[] = "String dd";
-// 	t_list *dd = malloc(sizeof(t_list));
-// 	dd->next = 0;
-// 	dd->data = strdd;
-
-// 	aa->next = bb;
-// 	bb->next = cc;
-// 	cc->next = dd;
-
-// 	t_list **begin_list = &aa;
-
-// 	print_list(begin_list);
-// 	printf("----------\n");
-// 	ft_list_remove_if(begin_list, straa, strcmp);
-// 	print_list(begin_list);
-// }

@@ -1,29 +1,72 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int	main(int argc, char **argv)
+int main(int argc, char **argv)
 {
-	int	i = 1;
-	int	nb;
-
-	if (argc == 2)
-	{
-		nb = atoi(argv[1]);
-		if (nb == 1)
-			printf("1");
-		while (nb >= ++i)
-		{
-			if (nb % i == 0)
-			{
-				printf("%d", i);
-				if (nb == i)
-					break ;
-				printf("*");
-				nb /= i;
-				i = 1;
-			}
-		}
-	}
-	printf("\n");
-	return (0);
+    if(argc == 2)
+    {
+        
+    }
+    printf("\n");
+    return(0);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+int main(int argc, char **argv)
+{
+    if (argc == 2)
+    {
+        int n = atoi(argv[1]);
+        int i = 2;
+
+        if (n == 1)
+        {
+            printf("1\n");
+            return (0);
+        }
+
+        while (i * i <= n)
+        {
+            if (n % i == 0)
+            {
+                printf("%d", i);
+                n /= i;
+                if (n > 1)
+                    printf("*");
+            }
+            else
+                i++;
+        }
+
+        if (n > 1)
+            printf("%d", n);
+
+        printf("\n");
+    }
+    else
+        printf("\n");
+
+    return (0);
+}
+

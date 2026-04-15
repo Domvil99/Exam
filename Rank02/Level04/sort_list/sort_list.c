@@ -1,24 +1,25 @@
-#include <stdlib.h>
 #include "list.h"
 
-t_list *sort_list(t_list *lst, int (*cmp)(int, int))
+t_list  *sort_list(t_list *lst, int (*cmp)(int, int))
 {
-	int swap;
-	t_list *tmp;
+    t_list  *tmp;
+    int     swap;
 
-	tmp = lst;
-	while (lst->next != NULL)
-	{
-		if (((*cmp)(lst->data, lst->next->data)) == 0)
-		{
-			swap = lst->data;
-			lst->data = lst->next->data;
-			lst->next->data = swap;
-			lst = tmp;
-		}
-		else
-			lst = lst->next;
-	}
-	lst = tmp;
-	return (lst);
+    if (!lst)
+        return (NULL);
+
+    tmp = lst;
+    while (tmp->next)
+    {
+        if (!cmp(tmp->data, tmp->next->data))
+        {
+            swap = tmp->data;
+            tmp->data = tmp->next->data;
+            tmp->next->data = swap;
+            tmp = lst;          // reiniciar para asegurar orden correcto
+        }
+        else
+            tmp = tmp->next;
+    }
+    return (lst);
 }
