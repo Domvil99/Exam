@@ -25,16 +25,3 @@ __second Test A Little Bit   Moar Complex$
    But... This Is Not That Complex$
      Okay, This Is The Last 1239809147801 But Not    The Least    T$
 $>
-
-Escribe un programa que reciba una o varias cadenas y, para cada argumento:
-
-ponga en mayúscula el primer carácter de cada palabra (si es una letra, obviamente),
-
-ponga el resto de los caracteres de la palabra en minúscula,
-
-y muestre el resultado en la salida estándar, seguido de un \n.
-
-Una “palabra” se define como una parte de la cadena delimitada por espacios/tabulaciones, o por el inicio/fin de la cadena.
-Si una palabra tiene solo una letra, debe ponerse en mayúscula.
-
-Si no hay argumentos, el programa debe mostrar solo \n.

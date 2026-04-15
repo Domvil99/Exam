@@ -25,20 +25,3 @@ $> ./a.out "SecONd teST A LITtle BiT   Moar comPLEX" "   But... This iS not THAT
 seconD tesT A littlE biT   moaR compleX$
    but... thiS iS noT thaT compleX$
      okay, thiS iS thE lasT 1239809147801 buT noT    thE leasT    T$
-
-
-
-Escribe un programa que reciba una o más cadenas y, para cada argumento, convierta:
-
-el último carácter que sea una letra de cada palabra a mayúscula,
-
-y el resto de los caracteres de la palabra a minúscula,
-
-luego muestre el resultado seguido de un \n.
-
-Una palabra es una sección de la cadena delimitada por espacios/tabulaciones o por el inicio/fin de la cadena.
-Si una palabra tiene una sola letra, esa letra debe ponerse en mayúscula.
-
-Una letra es un carácter dentro del conjunto [a-zA-Z].
-
-Si no hay parámetros, muestra solo \n.

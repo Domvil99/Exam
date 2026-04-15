@@ -36,10 +36,3 @@ $>
 $>./tab_mult | cat -e
 $
 $>
-
-Escribe un programa que muestre la tabla de multiplicar de un número.
-
-El parámetro será siempre un número estrictamente positivo que cabe en un int,
-y ese número multiplicado por 9 también cabrá en un int.
-
-Si no hay parámetros, el programa muestra \n.

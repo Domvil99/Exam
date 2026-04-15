@@ -1,74 +1,30 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+int gcd(int a, int b)
+{
+    while(b)
+    {
+        int tm = a % b;
+        a = b;
+        b = tm;
+    }
+    return(a);
+}
 int main(int argc, char **argv)
 {
     if(argc == 3)
     {
+        int a = atoi(argv[1]);
+        int b = atoi(argv[2]);
 
-    }
-    printf("\n");
-    return(0);
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-int gcd(int a, int b)
-{
-    while (b != 0)
-    {
-        int tmp = a % b;
-        a = b;
-        b = tmp; 
-    }
-    return (a);
-}
-
-int main(int ac, char **av)
-{
-    if (ac == 3)
-    {
-        int a = atoi(av[1]);
-        int b = atoi(av[2]);
-
-        if (a > 0 && b > 0)
+        if(a > 0 && b > 0)
             printf("%d\n", gcd(a, b));
         else
             printf("\n");
-
-        return (0);
+        return(0);
     }
-
-    printf("\n");
-    return (0);
+    else
+        printf("\n");
+    return(0);
 }

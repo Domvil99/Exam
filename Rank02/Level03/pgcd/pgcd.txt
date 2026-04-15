@@ -23,10 +23,3 @@ $> ./pgcd 17 3 | cat -e
 1$
 $> ./pgcd | cat -e
 $
-
-Escribe un programa que reciba dos cadenas que representan dos enteros estrictamente positivos que caben en un int.
-
-Muestra su máximo común divisor seguido de un salto de línea
-(siempre será un entero estrictamente positivo).
-
-Si el número de parámetros no es 2, muestra solo un salto de línea.
