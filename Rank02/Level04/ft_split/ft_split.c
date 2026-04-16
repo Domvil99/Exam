@@ -1,60 +1,4 @@
 #include <stdlib.h>
-int search(char s)
-{
-    return(s == ' ' || s == '\t' || s == '\0');
-}
-int count_words(char *str)
-{
-    int count = 0;
-    while(*str)
-    {
-        while(*str && search(*str))
-            str++;
-        if(*str && !search(*str))
-        {
-            count++;
-            if()
-        }
-    }
-    
-} 
-char    **ft_split(char *str)
-{   
-    int len = count(str); 
-    char **tab = malloc
-    while(*str)
-    {
-        while(*str && search(*str))
-            str++;
-        if(*str && !search(*str))
-        {
-            int i = 0;
-        }
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 static int  is_sep(char c)
 {
@@ -69,6 +13,7 @@ static int  count_words(char *str)
     {
         while (*str && is_sep(*str))
             str++;
+
         if (*str && !is_sep(*str))
         {
             count++;
@@ -91,14 +36,13 @@ static char *copy_word(char *str)
     word = malloc(len + 1);
     if (!word)
         return (NULL);
-    
-    while(i < len)
+
+    while (i < len)
     {
         word[i] = str[i];
         i++;
     }
     word[len] = '\0';
-    
     return (word);
 }
 
@@ -115,10 +59,12 @@ char    **ft_split(char *str)
     {
         while (*str && is_sep(*str))
             str++;
+
         if (*str && !is_sep(*str))
         {
             tab[i] = copy_word(str);
             i++;
+
             while (*str && !is_sep(*str))
                 str++;
         }

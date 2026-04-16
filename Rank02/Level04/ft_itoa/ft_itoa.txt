@@ -9,6 +9,3 @@ The function returns the result in a char array that you must allocate.
 Your function must be declared as follows:
 
 char	*ft_itoa(int nbr);
-
-Escribe una función que reciba un int y lo convierta en una cadena terminada en \0.
-La función debe devolver el resultado en un array de chars que tú debes reservar (con malloc).

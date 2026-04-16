@@ -22,10 +22,12 @@ int main(int ac, char **av)
         int i = 0;
 
         /* Contar palabras */
-        for (int k = 0; s[k]; )
+        int k = 0;
+        while (s[k])
         {
             while (s[k] && is_sep(s[k]))
                 k++;
+
             if (s[k] && !is_sep(s[k]))
             {
                 wc++;
@@ -43,6 +45,7 @@ int main(int ac, char **av)
         {
             while (*s && is_sep(*s))
                 s++;
+
             if (*s && !is_sep(*s))
             {
                 int len = 0;
@@ -50,8 +53,12 @@ int main(int ac, char **av)
                     len++;
 
                 words[i] = malloc(len + 1);
-                for (int j = 0; j < len; j++)
+                int j = 0;
+                while (j < len)
+                {
                     words[i][j] = s[j];
+                    j++;
+                }
                 words[i][len] = '\0';
                 i++;
 
@@ -61,10 +68,12 @@ int main(int ac, char **av)
         words[i] = NULL;
 
         /* Imprimir desde la segunda palabra hasta la última */
-        for (int j = 1; j < wc; j++)
+        i = 1;
+        while (i < wc)
         {
-            putstr(words[j]);
+            putstr(words[i]);
             write(1, " ", 1);
+            i++;
         }
 
         /* Imprimir la primera palabra al final */
@@ -72,10 +81,15 @@ int main(int ac, char **av)
             putstr(words[0]);
 
         /* Liberar memoria */
-        for (int j = 0; j < wc; j++)
-            free(words[j]);
+        i = 0;
+        while (i < wc)
+        {
+            free(words[i]);
+            i++;
+        }
         free(words);
     }
+
     write(1, "\n", 1);
     return (0);
 }

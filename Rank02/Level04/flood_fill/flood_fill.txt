@@ -38,29 +38,3 @@ F00F000F
 F0FF010F
 FFF0000F
 $>
-
-
-Escribe una función que reciba:
-
-un char ** como un arreglo bidimensional de caracteres,
-
-un t_point como las dimensiones de ese arreglo,
-
-y un t_point como el punto inicial.
-
-A partir del t_point begin dado, esta función debe rellenar toda una zona reemplazando los caracteres dentro de ella por el carácter 'F'.
-
-Una zona es un grupo de caracteres iguales, delimitados horizontal y verticalmente por otros caracteres o por los límites del arreglo.
-
-La función no rellenará en diagonal.
-
-La función flood_fill tendrá este prototipo:
-
-void  flood_fill(char **tab, t_point size, t_point begin);
-
-La estructura t_point está definida así:
-typedef struct  s_point
-{
-    int x;
-    int y;
-}               t_point;

@@ -9,7 +9,6 @@ void    ft_list_remove_if(t_list **begin_list, void *data_ref, int (*cmp)())
     if (!begin_list || !*begin_list)
         return;
 
-    /* Eliminar nodos del inicio mientras coincidan */
     while (*begin_list && cmp((*begin_list)->data, data_ref) == 0)
     {
         tmp = *begin_list;
@@ -21,7 +20,6 @@ void    ft_list_remove_if(t_list **begin_list, void *data_ref, int (*cmp)())
     if (!curr)
         return;
 
-    /* Eliminar nodos del resto de la lista */
     while (curr->next)
     {
         if (cmp(curr->next->data, data_ref) == 0)
