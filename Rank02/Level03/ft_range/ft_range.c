@@ -8,7 +8,7 @@ int *ft_range(int start, int end)
      
     if(start <= end)
     {
-        len = end - start+ 1;
+        len = end - start + 1;
         sign = 1; 
     }
     else
